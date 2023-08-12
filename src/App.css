@@ -3,7 +3,7 @@
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 60vmin;
   pointer-events: none;
 }
 
@@ -12,9 +12,13 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
+.btn.btn-test{
+  font-size: 25px;
+  font-weight: 700;
+}
 
 .App-header {
-  background-color: #282c34;
+  background-color: #4c7ad6;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
