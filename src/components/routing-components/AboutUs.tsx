@@ -1,11 +1,14 @@
 import React, { useEffect } from "react";
 import { NavLink } from "react-router-dom";
+import { useSignal } from "../../utilities/hook/SignalHook";
 import { Highlight } from "../shared-components/Highlight";
 
 export interface IAboutUsProps{
     
 }
 export const AboutUs: React.FC<IAboutUsProps> = (props): React.ReactElement => {
+
+    const [colorValue] = useSignal(5000);
 
     return (
         <div className="container">
@@ -27,6 +30,14 @@ export const AboutUs: React.FC<IAboutUsProps> = (props): React.ReactElement => {
                          the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, 
                          and more recently with desktop publishing software like Aldus PageMaker
                           including versions of Lorem Ipsum</p>
+                </div>
+            </div>
+
+
+            <div className="row">
+                <div className="col">
+                     <h2 style={{color:colorValue}}>Check my Color</h2>
+                     <span style={{backgroundColor:colorValue, borderRadius:"25px"}}>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
                 </div>
             </div>
         </div>

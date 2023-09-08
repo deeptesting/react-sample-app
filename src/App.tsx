@@ -9,6 +9,7 @@ import { Navbar } from './components/shared-components/Navbar';
 import { ContactUs } from './components/routing-components/ContactUs';
 import { NotFound } from './components/routing-components/NotFound';
 import { Employee } from './components/routing-components/Employee';
+import { Test1 } from './components/routing-components/Test1';
 
 function App() {
   return (
@@ -17,7 +18,7 @@ function App() {
         <Route path="/about-us" element={<><Navbar/><AboutUs/></>} />
         <Route path="/contact-us" element={<><Navbar/><ContactUs/></>} />
         <Route path="/employee/:empId" element={<><Navbar/><Employee/></>} />
-
+        <Route path="/test1" element={<><Navbar/><Test1/></>} />
         
         <Route path='/old-application' element={<Navigate to='/' />} />
         <Route path="*" element={<NotFound/>} />
