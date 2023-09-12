@@ -45,7 +45,6 @@ export function useFormTextControl(formControl: FormInputControl) {
     const textValue = (e.target as HTMLInputElement).value;
     setValue(textValue);
     const isValid = CheckIsValid(textValue);
-    //
     if(!isValid){
         setErrorMessage(formControl.requiredErroMsg ?? formControl.name+" field is required");
         setIsValid(isValid);

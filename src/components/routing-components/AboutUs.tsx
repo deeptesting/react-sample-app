@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { NavLink } from "react-router-dom";
+import { useFetchGetRequest } from "../../utilities/hook/FetchHook";
 import { useSignal } from "../../utilities/hook/SignalHook";
 import { Highlight } from "../shared-components/Highlight";
 
@@ -10,6 +11,11 @@ export const AboutUs: React.FC<IAboutUsProps> = (props): React.ReactElement => {
 
     const [colorValue] = useSignal(5000);
 
+    const { data, loading, error } = useFetchGetRequest("https://sv443.net/jokeapi/v2/joke/Programming?type=single");
+
+
+
+    
     return (
         <div className="container">
             <div className="row">
@@ -22,6 +28,17 @@ export const AboutUs: React.FC<IAboutUsProps> = (props): React.ReactElement => {
             </div>
             <div className="row">
                 <div className="col">
+                    <h2>loading {loading.toString()}</h2>
+                    <p> {
+                        !loading && data!==null &&
+                          <> {JSON.stringify(data)}</>
+                        } 
+                    </p>
+                </div>
+            </div>
+
+            <div className="row">
+                <div className="col">
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
                         Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
                         when an unknown printer took a galley of type and scrambled it to make a type 
@@ -32,6 +49,7 @@ export const AboutUs: React.FC<IAboutUsProps> = (props): React.ReactElement => {
                           including versions of Lorem Ipsum</p>
                 </div>
             </div>
+
 
 
             <div className="row">
