@@ -28,10 +28,6 @@ export function useSignal(timeInterval:number) {
       console.log("value ",value)
     },[value])
 
-//   const inputProps = {
-//     value: value,
-//     onChange: handleChange
-//   };
 
   return [value];
 }

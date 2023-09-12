@@ -28,7 +28,9 @@ export const Navbar: React.FC<INavbarProps> = (props): React.ReactElement => {
                         <li className="nav-item">
                             <NavLink className="nav-link" to="/test1">Test1</NavLink>
                         </li>
-                        
+                        <li className="nav-item">
+                            <NavLink className="nav-link" to="/formtest">Form Test</NavLink>
+                        </li>
                         {/* <li className="nav-item dropdown">
                             <NavLink className="nav-link dropdown-toggle" to="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Dropdown
