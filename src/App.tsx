@@ -11,6 +11,7 @@ import { NotFound } from './components/routing-components/NotFound';
 import { Employee } from './components/routing-components/Employee';
 import { Test1 } from './components/routing-components/Test1';
 import { FormTest } from './components/routing-components/Formtest';
+import { TestSample } from './components/routing-components/TestSample';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/employee/:empId" element={<><Navbar/><Employee/></>} />
         <Route path="/test1" element={<><Navbar/><Test1/></>} />
         <Route path="/formtest" element={<><Navbar/><FormTest/></>} />
+        <Route path="/TestSample" element={<><Navbar/><TestSample/></>} />
         <Route path='/old-application' element={<Navigate to='/' />} />
         <Route path="*" element={<NotFound/>} />
       </Routes>

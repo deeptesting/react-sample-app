@@ -33,9 +33,10 @@ const Test1Child: React.FC<ITest1ChildProps> = (props): React.ReactElement => {
 
     //const data = expensiveCalculation(count);
 
-    const data = React.useMemo(()=> 
-        expensiveCalculation(count)
-    ,[count]);
+    const data = 10; 
+    // React.useMemo(()=> 
+    //     expensiveCalculation(count)
+    // ,[count]);
 
     console.log("child render data = "+data);
     return (
