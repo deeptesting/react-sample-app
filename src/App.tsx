@@ -12,6 +12,7 @@ import { Employee } from './components/routing-components/Employee';
 import { Test1 } from './components/routing-components/Test1';
 import { FormTest } from './components/routing-components/Formtest';
 import { TestSample } from './components/routing-components/TestSample';
+import { ReducerTest } from './components/routing-components/ReducerTest';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path="/test1" element={<><Navbar/><Test1/></>} />
         <Route path="/formtest" element={<><Navbar/><FormTest/></>} />
         <Route path="/TestSample" element={<><Navbar/><TestSample/></>} />
+        <Route path="/ReducerTest" element={<><Navbar/><ReducerTest/></>} />
         <Route path='/old-application' element={<Navigate to='/' />} />
         <Route path="*" element={<NotFound/>} />
       </Routes>
